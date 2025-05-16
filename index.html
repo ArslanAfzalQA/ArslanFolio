@@ -46,7 +46,7 @@
                     <a href="#review" class="nav-item nav-link">Review</a>
                     <a href="#team" class="nav-item nav-link">Team</a>
                     <a href="#blog" class="nav-item nav-link">Blog</a> -->
-                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <a href="#footer" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </div>
@@ -67,8 +67,8 @@
                             <div class="typed-text">Quality Assurance Engineer, Test Automation Specialist, Performance Analyst, Agile QA Lead</div>
                         </div>
                         <div class="hero-btn">
-                            <a class="btn" href="#contact">Hire Me</a>
-                            <a class="btn" href="#contact">Contact Me</a>
+                            <a class="btn" href="#footer">Hire Me</a>
+                            <a class="btn" href="#footer">Contact Me</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                                     aria-valuemax="100"></div>
                             </div>
                         </div>
-                        <a class="btn" href="">Learn More</a>
+                        <a class="btn" href="#experience">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -1021,58 +1021,6 @@
             </div>
         </div> -->
     <!-- Contact End -->
-<form id="contactForm" method="POST">
-    <div class="control-group">
-        <input type="text" class="form-control" name="name" placeholder="Your Name" required />
-    </div>
-    <div class="control-group">
-        <input type="email" class="form-control" name="email" placeholder="Your Email" required />
-    </div>
-    <div class="control-group">
-        <input type="text" class="form-control" name="subject" placeholder="Subject" required />
-    </div>
-    <div class="control-group">
-        <textarea class="form-control" name="message" placeholder="Message" required></textarea>
-    </div>
-
-    <!-- Optional FormSubmit settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Contact Message">
-
-    <div>
-        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-    </div>
-</form>
-<div id="success" style="margin-top: 10px;"></div>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Stop default form submission
-
-    const form = e.target;
-    const formData = new FormData(form);
-
-    fetch("https://formsubmit.co/ajax/muhammadarslanafzal8@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            document.getElementById("success").innerHTML = "<div class='text-success'>Thank you! Your message has been sent.</div>";
-            form.reset();
-        } else {
-            document.getElementById("success").innerHTML = "<div class='text-danger'>Oops! Something went wrong. Try again.</div>";
-        }
-    })
-    .catch(error => {
-        document.getElementById("success").innerHTML = "<div class='text-danger'>Error submitting the form.</div>";
-    });
-});
-</script>
-
-
 
 
     <!-- Blog Start -->
@@ -1130,7 +1078,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 
     <!-- Footer Start -->
-    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div id="footer" class="footer wow fadeIn" data-wow-delay="0.3s">
         <div class="container-fluid">
             <div class="container">
                 <div class="footer-info">
